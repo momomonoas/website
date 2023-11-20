@@ -1,0 +1,152 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    vertical-align: top;
+}
+html,body {
+    font-family: 'NanumSquareRound';
+}
+.wrap {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.sky {
+    width: 100%;
+    height: 65%;
+    background-color: #C0D7EF;
+}
+.ground {
+    width: 100%;
+    height: 35%;
+    background-color: #757171;
+    display: flex;
+}
+.ground .cafe {
+    width: 60%;
+    position: relative;
+}
+.ground .cafe img {
+    display: block;
+    width: 1000px;
+    height: 550px;
+    position: absolute;
+    right: 10px;
+    bottom: 218px;
+}
+.ground .teacher {
+    width: 40%;
+    position: relative;
+}
+.ground .teacher .click {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    left: 350px;
+    animation: click-ani 3s ease infinite;
+}
+@keyframes click-ani {
+    0% {
+        bottom: 550px;
+    }
+    50% {
+        bottom: 530px;
+    }
+    100% {
+        bottom: 550px;
+    }
+}
+.ground .teacher .click p {
+    margin-bottom: 20px;
+}
+.ground .teacher img {
+    display: block;
+    position: absolute;
+}
+.ground .teacher .post-box {
+    height: 400px;
+    left: 294px;
+    bottom: 100px;
+}
+.ground .teacher .teacher-img {
+    height: 450px;
+    left: 79px;
+    bottom: 100px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.modal.show {
+    display: block;
+}
+.modal .dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+}
+.modal .dim i {
+    font-size: 30px;
+    position: fixed;
+    top: 50px;
+    right: 30px;
+    cursor: pointer;
+}
+.letter {
+    width: 500px;
+    height: 750px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+.letter.show{
+    opacity: 1;
+    visibility: visible;
+}
+.letter .swiper-wrapper {}
+.letter .swiper-slide {
+    background: url('../img/편지지.jpg') no-repeat center;
+    background-size: cover;
+    padding: 4rem;
+}
+.letter .swiper-slide p {
+    font-size: 20px;
+}
+.letter .swiper-slide.small p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.letter .swiper-slide .letter-txt {
+    margin-bottom: 5rem;
+}
+.letter .swiper-slide .letter-txt.small {
+    margin-bottom: 2rem;
+}
+.letter .swiper-slide .letter-from {
+    text-align: end;
+}
